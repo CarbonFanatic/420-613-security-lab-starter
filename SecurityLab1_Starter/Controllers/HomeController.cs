@@ -26,5 +26,13 @@ namespace SecurityLab1_Starter.Controllers
 
             return View();
         }
+        public ActionResult DefaultAction()
+        {
+            return View();
+        }
+        public ActionResult GenError()
+        {
+            return new HttpStatusCodeResult(500);
+        }
     }
 }
