@@ -10,7 +10,8 @@ namespace SecurityLab1_Starter.Controllers
     {
         public ViewResult Index()
         {
-            return View("Index");
+            return View("NotFound");
+
         }
         public ViewResult NotFound()
         {

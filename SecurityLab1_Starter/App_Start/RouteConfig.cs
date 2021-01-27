@@ -13,13 +13,19 @@ namespace SecurityLab1_Starter
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+    
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                constraints: new { controller = "Home|Inventory", action = "Index|About|Contact"}
             );
 
-
+            routes.MapRoute(
+             name: "NotFound",
+              url: "{*any}",
+             defaults: new { controller = "Error", action = "NotFound" }
+ );
         }
     }
 }
