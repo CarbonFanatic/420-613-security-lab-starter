@@ -16,7 +16,6 @@ namespace SecurityLab1_Starter.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-            throw new Exception();
             return View();
         }
 
@@ -32,7 +31,7 @@ namespace SecurityLab1_Starter.Controllers
         }
         public ActionResult GenError()
         {
-            return new HttpStatusCodeResult(500);
+            throw new Exception("HMMM");
         }
     }
 }

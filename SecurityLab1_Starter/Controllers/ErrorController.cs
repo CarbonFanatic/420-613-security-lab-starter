@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Diagnostics;
 namespace SecurityLab1_Starter.Controllers
 {// GET: Error
     public class ErrorController : Controller
@@ -22,7 +22,9 @@ namespace SecurityLab1_Starter.Controllers
         }
         public ViewResult ServerError()
         {
+
             Response.StatusCode = 500;
+          
             return View("ServerError");
         }
     }
