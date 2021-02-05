@@ -16,6 +16,8 @@ namespace SecurityLab1_Starter.Controllers
         public ViewResult NotFound()
         {
             Response.StatusCode = 404;
+            ViewBag.Msg404 = Request.RawUrl;
+
             return View("NotFound");
         }
         public ViewResult ServerError()
